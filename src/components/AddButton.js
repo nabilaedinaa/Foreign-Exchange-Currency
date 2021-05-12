@@ -6,6 +6,7 @@ import { styled } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Button } from '@material-ui/core';
 
+
 const CurrencyBox = styled(Box)({
     borderWidth: '1px',
     borderRadius: 3,
@@ -41,8 +42,7 @@ function AddButton ({props, selectedCurrency}) {
             rateConvert = 0 + rate;
             finalAmount = rateConvert;
             return rateConvert.toFixed(4);
-        }
-        
+        }  
     }
 
     const AddCurrency = (event) => {
@@ -50,6 +50,7 @@ function AddButton ({props, selectedCurrency}) {
         const newList = list;
         newList.push({newValue: input});
         setList([...newList]);
+        setInput("");
     }
 
     const handleSubmit = (e) => {
@@ -57,13 +58,19 @@ function AddButton ({props, selectedCurrency}) {
         props.onSubmit({
             text: list
         })
-        setInput('');
+        setInput(null);
     };
+
+    const deleteCurrency = (index) => {
+        var newList = list;
+        newList.splice(index,1);
+        setList([...newList]);
+    }
 
 
     return (
         <>
-        {list.map((singleCurrency)=>{
+        {list.map((singleCurrency, index)=>{
             return (
                 <>
                 <CurrencyBox>
@@ -83,7 +90,7 @@ function AddButton ({props, selectedCurrency}) {
                         })}</div>
                     </Grid>
                     <Grid item xs={2} className="Line">
-                        <Button size="small" className={classes.margin}>(-)</Button>
+                        <Button size="small" className={classes.margin} onClick={()=>deleteCurrency(index)}>(-)</Button>
                     </Grid>
                 </Grid>
             </CurrencyBox>
@@ -99,7 +106,7 @@ function AddButton ({props, selectedCurrency}) {
                             const selectedCurrency = e.target.value;
                             setInput(selectedCurrency);
                         }}>
-                            <option className="Currency-opt">(+) Add more currencies</option>
+                            <option className="Currency-opt" value="" selected disabled>(+) Add more currencies</option>
                             {Data.map(post => {
                                 return(
                                 <option className="Currency-opt" value={post.code} key={post}>{post.code}</option>
