@@ -1,0 +1,84 @@
+[
+    {
+            "code":"CAD",
+            "alphaCode":"CAD",
+            "numericCode":"124",
+            "name":"Canadian Dollar",
+            "rate":1.2128024180201,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":0.82453661465525
+    },
+    {
+            "code":"IDR",
+            "alphaCode":"IDR",
+            "numericCode":"360",
+            "name":"Indonesian Rupiah",
+            "rate":14217.584255671,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":7.0335436879942e-5
+    },
+    {
+            "code":"GBP",
+            "alphaCode":"GBP",
+            "numericCode":"826",
+            "name":"U.K. Pound Sterling",
+            "rate":0.70746742503287,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":1.4134926423694
+    },
+    {
+            "code":"CHF",
+            "alphaCode":"CHF",
+            "numericCode":"756",
+            "name":"Swiss Franc",
+            "rate":0.9022271979168,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":1.1083682716603
+    },
+    {
+
+            "code":"SGD",
+            "alphaCode":"SGD",
+            "numericCode":"702",
+            "name":"Singapore Dollar",
+            "rate":1.3261571176965,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":0.75405846460861
+    },
+    {
+            "code":"INR",
+            "alphaCode":"INR",
+            "numericCode":"356",
+            "name":"Indian Rupee",
+            "rate":73.423068710106,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":0.013619697699483
+    },
+    {
+            "code":"MYR",
+            "alphaCode":"MYR",
+            "numericCode":"458",
+            "name":"Malaysian Ringgit",
+            "rate":4.1143580164127,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":0.24305128430994
+    },
+    {
+            "code":"JPY",
+            "alphaCode":"JPY",
+            "numericCode":"392",
+            "name":"Japanese Yen",
+            "rate":108.76690645045,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":0.0091939729889768
+    },
+    {
+            "code":"KRW",
+            "alphaCode":"KRW",
+            "numericCode":"410",
+            "name":"South Korean Won",
+            "rate":1116.9953275023,
+            "date":"Wed, 12 May 2021 00:00:01 GMT",
+            "inverseRate":0.00089525889265454
+    }
+]

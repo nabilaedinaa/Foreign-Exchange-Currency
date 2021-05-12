@@ -1,0 +1,38 @@
+select {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 10px;   
+}
+
+.Calculated {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.Currency-name {
+  text-align: left;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.Line {
+    border-left: 1px solid black;
+    height: auto;
+}
+
+.Button {
+    align-items: center;
+    justify-content: center;
+}
+
+.margin {
+    margin: 0;
+    font-size: 20px;
+    position: relative;
+    top: '20%';
+}
