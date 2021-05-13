@@ -9,11 +9,17 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* color: white; */
 }
 
-.App-link {
-  color: #61dafb;
+.main-page{
+  border-width: 1px;
+  border-radius: 3;
+  border-style: solid;
+  color: black;
+  border-color: black;
+  height: 900px;
+  min-width: 480px;
+  overflow: hidden;
 }
 
 .Base-currency {
@@ -25,7 +31,6 @@
 }
 
 .Value {
-  
   font-family: Georgia, serif;
   font-weight: bolder;
   font-size: 25px;
@@ -36,5 +41,11 @@
 hr {
   border-top: 1px solid;
   margin-top: -3px;
+}
+
+.currency {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 780px;
 }
 
