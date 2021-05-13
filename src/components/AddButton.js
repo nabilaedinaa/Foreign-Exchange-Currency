@@ -31,11 +31,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function AddButton ({props, selectedCurrency}) {
     const classes = useStyles();
     const [input, setInput] = useState('');
     const [list, setList] = useState([]);
     let finalAmount;
+
+    // Function that calls rate without repeating
     const realRate = (rate) => {
         if(rate!==0){
             let rateConvert;
@@ -45,6 +48,7 @@ function AddButton ({props, selectedCurrency}) {
         }  
     }
 
+    // Function to add new currency
     const AddCurrency = (event) => {
         event.preventDefault();
         const newList = list;
@@ -53,6 +57,7 @@ function AddButton ({props, selectedCurrency}) {
         setInput("");
     }
 
+    // Handle submit button
     const handleSubmit = (e) => {
         console.log('Submitted!');
         props.onSubmit({
@@ -61,6 +66,7 @@ function AddButton ({props, selectedCurrency}) {
         setInput(null);
     };
 
+    // Handle delete button
     const deleteCurrency = (index) => {
         var newList = list;
         newList.splice(index,1);
@@ -76,8 +82,10 @@ function AddButton ({props, selectedCurrency}) {
                 <CurrencyBox>
                 <Grid container>
                     <Grid item xs={10}>
+                        {/* New currency */}
                         <div className="Calculated" style={{textAlign: 'left'}}>
                             {singleCurrency.newValue}
+                            {/* Calculated amount */}
                             <span style={{float:'right'}}>{Data.map(post => {
                                 return post.code === singleCurrency.newValue ? 10*realRate(post.rate) : realRate(0)
                             })}</span>
@@ -89,6 +97,8 @@ function AddButton ({props, selectedCurrency}) {
                             return post.code === singleCurrency.newValue ? realRate(post.rate) : realRate(0)
                         })}</div>
                     </Grid>
+
+                    {/* Delete button */}
                     <Grid item xs={2} className="Line">
                         <Button size="small" className={classes.margin} onClick={()=>deleteCurrency(index)}>(-)</Button>
                     </Grid>
@@ -102,7 +112,8 @@ function AddButton ({props, selectedCurrency}) {
             <CurrencyBox >
             <Grid container>
                     <Grid item xs={9} style={{textAlign: 'left'}}>
-                        <select value={selectedCurrency} onChange={(e) => {
+                        {/* Dropdown menu */}
+                        <select value={selectedCurrency} aria-label="curr-input" onChange={(e) => {
                             const selectedCurrency = e.target.value;
                             setInput(selectedCurrency);
                         }}>
@@ -114,6 +125,7 @@ function AddButton ({props, selectedCurrency}) {
                             })}
                         </select>
                     </Grid>
+                    {/* Submit button */}
                     <Grid item xs={3} className="Line">
                         <div className={classes.margin} onClick={AddCurrency}>Submit</div>
                     </Grid>

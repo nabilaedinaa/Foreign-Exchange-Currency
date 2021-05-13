@@ -2,7 +2,9 @@
 
 Author: Nabila Edina \
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). \
-Foreign Exchange Rates API source: https://www.floatrates.com/json-feeds.html
+Foreign Exchange Rates API source: https://www.floatrates.com/json-feeds.html (retrieved Wed, 12 May 2021) \
+FE UI framework: Material UI
+
 
 ## How to Run Dockerfile
 Make sure that you have installed the Docker app. If you haven's, you can install through this link: https://hub.docker.com/editions/community/docker-ce-desktop-mac/ (for mac user). The installation is quite easy. You just need to follow those steps. If the installation is finished, now you have a Docker app on your Applications folder. Click the application and wait until docker runs. 
